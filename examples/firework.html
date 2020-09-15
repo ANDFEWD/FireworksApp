@@ -57,11 +57,11 @@
                 .createEntity("")
                 .addComponent(PARTICLES.ParticleEmitter, {
                   particleMesh: sharedParticleMesh,
-                  atlas: "fireworks_sheet.png",
+                  atlas: "explosion_sheet.png",
                   textureFrame: { cols: 25, rows: 25 },
                   count: 3500,
                   lifeTime: 3,
-                  scales: [0.7],
+                  scales: [0.1],
                   colors: [new THREE.Color(gradient)],
                   burst: 1,
                   worldUp: true,
@@ -102,7 +102,7 @@
 
       class FireworksExplosionSystem extends ECSY.System {
         execute(dt, t) {
-          
+                    
           this.queries.explosion.results.forEach(entity => {
             let explosionF = entity.getComponent(FireworksExplosion)
 
@@ -178,7 +178,7 @@
         let randomColor = Math.floor(Math.random()*16777215).toString(16);
         let gradient ="#" + randomColor;
 
-        console.log(world)
+        // console.log(world)
         // entity.remove();
         // world
         // let entityLength = world.entityManager._entities.length;
@@ -194,7 +194,7 @@
             colors: [new THREE.Color(gradient)],
             radialAcceleration: 0.05,
             opacities: [0, 1, 0.5],
-            scales: [0.5],
+            scales: [0.1],
             syncTransform: true,
             velocity: { x: 0, y: 0, z: 0 },
             
