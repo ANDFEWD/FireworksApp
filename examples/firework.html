@@ -173,10 +173,10 @@
            
       document.body.addEventListener("click", () => {
         let randoY = random(0, Math.PI / 70)
-        let randoZ = random(0, Math.PI / 140)
+        // let randoZ = random(0, Math.PI / 140)
         let randoX = random(0, Math.PI / 140)
-        let randomColor = Math.floor(Math.random()*16777215).toString(16);
-        let gradient ="#" + randomColor;
+        // let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        // let gradient ="#" + randomColor;
 
         // console.log(world)
         // entity.remove();
@@ -191,7 +191,7 @@
             count: 2500,
             lifeTime: 2,
             worldUp: true,
-            colors: [new THREE.Color(gradient)],
+            colors: [new THREE.Color("white"),new THREE.Color("yellow"), new THREE.Color("red")],
             radialAcceleration: 0.05,
             opacities: [0, 1, 0.5],
             scales: [0.1],
