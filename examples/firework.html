@@ -32,8 +32,7 @@
       Firework.schema = {
         x: { type: ECSY.Types.Number, default: 0 },
         y: { type: ECSY.Types.Number, default: 0 },
-        z: { type: ECSY.Types.Number, default: 0 },
-        time: { type: ECSY.Types.Number, default: 0 }
+        z: { type: ECSY.Types.Number, default: 0 }
       }
       
       class FireworksSystem extends ECSY.System {
@@ -206,7 +205,7 @@
               z: PARTICLES.randomNumber(-1, 1)
             }
           })
-          .addComponent(Firework, { x: randoX, y: randoY, z: 0, time: 4 })
+          .addComponent(Firework, { x: randoX, y: randoY, z: 0})
         // console.log(Firework);
       })
 
